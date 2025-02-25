@@ -28,9 +28,9 @@
     }
 
     #main_image {
-        height: 83vh;
         width: 100%;
-        object-fit: cover;  /* This ensures the image covers the area without distortion */
+        aspect-ratio: 16/9;
+        max-height: 83vh;
     }
 
     #dumdumz_quote {
@@ -50,5 +50,11 @@
         font-size: x-large;
         cursor:pointer;
     }
+
+    @media screen and (max-width: 480px) {
+        body {
+          background-color: lightgreen;
+        }
+      }
 </style>
 </html>
