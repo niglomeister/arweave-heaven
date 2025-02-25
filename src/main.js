@@ -5,7 +5,8 @@ import { getBalance } from 'arweavekit/wallet'
 
 async function get_ar_balance() {
 
-  const response = await ArConnect.connect({permissions :['ACCESS_ADDRESS']});    
+  const response = await ArConnect.connect({permissions :['ACCESS_ADDRESS']});  
+  console.log(response,'========')  
   const address = await ArConnect.getActiveAddress();
   const balance = await getBalance({address : address, options : {winstonToAr : true}})
   return balance
